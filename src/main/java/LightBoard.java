@@ -14,8 +14,7 @@ public class LightBoard
     lights = new boolean[numRows][numCols];
     for (int i = 0; i < numRows; i++) {
       for (int j = 0; j < numCols; j++) {
-        double rnd = Math.random();
-        lights[i][j] = rnd < 0.4;
+        lights[i][j] = Math.random() < 0.4;
       }
     }
 
@@ -29,8 +28,8 @@ public class LightBoard
   {
     /* to be implemented in part (b) */
     int count = 0;
-    for (int i = 0; i < lights[row].length; i++) {
-      if (lights[row][i]) {
+    for (int i = 0; i < lights.length; i++) {
+      if (lights[i][col]) {
         count++;
       }
     }
